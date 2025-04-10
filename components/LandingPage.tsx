@@ -1,8 +1,11 @@
-import { StyleSheet, Text, View, Image, Button } from 'react-native'
+import { StyleSheet, Text, View, Image, Button, Platform } from 'react-native'
 import NavBarButton from './NavBarButton'
+import CardView from './CardView'
 import bg1 from '../assets/images/bg1.jpg'
 import logo from '../assets/images/Logo-NBG.png'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
+
+import styles from './LandingPage.style'
 
 export default function LandingPage() {
     return (
@@ -37,146 +40,17 @@ export default function LandingPage() {
                         <Text style={styles.thirdText}>Through our collaborative research and discovery process, we establish a shared vision and make sure the right product gets built for the right audience.</Text>
                     </View>
 
-                    <View style={styles.normalCard}>
-                        <Text style={styles.masterText}>02</Text>
-                        <Text style={styles.secondText}>User Experience Design</Text>
-                    </View>
-                    
-                    <View style={styles.normalCard}>
-                        <Text style={styles.masterText}>03</Text>
-                        <Text style={styles.secondText}>User Interface Design</Text>
-                    </View>
+                    <CardView number="02" title="User Experience Design" />
+            
+                    <CardView number="03" title="User Interface Design" />
+            
+                    <CardView number="04" title="Usability Testing" />
 
-                    <View style={styles.normalCard}>
-                        <Text style={styles.masterText}>04</Text>
-                        <Text style={styles.secondText}>Usability Testing</Text>
-                    </View>
+                    <CardView number='05' title="Interaction Design" />                   
 
-                    <View style={styles.normalCard}>
-                        <Text style={styles.masterText}>05</Text>
-                        <Text style={styles.secondText}>Interaction Design</Text>
-                    </View>
-
-                    <View style={styles.normalCard}>
-                        <Text style={styles.masterText}>05</Text>
-                        <Text style={styles.secondText}>Front-end Development</Text>
-                    </View>
+                    <CardView number='06' title="Front-end Development" />                   
                 </View>
             </View>
         </>
     )
 }
-
-const styles = StyleSheet.create({
-    thirdText: {
-        color: 'white',
-        fontSize: 15
-    },
-    secondText: {
-        color: 'white',
-        fontWeight: 'bold',
-        fontSize: 20
-    },
-    masterText: {
-        color: '#FFFFFF80',
-        fontSize: 30
-    },
-    normalCard: {
-        width: 270,
-        height: 150,
-        display: 'flex',
-        flexDirection: 'column',
-        paddingStart: 30,
-        paddingEnd: 20,
-        alignItems: 'flex-start',
-        justifyContent: 'center',
-        backgroundColor: '#FFFFFF10',
-        borderRadius: 8,
-        shadowColor: 'black',
-        elevation: 15
-    },
-    masterCard: {
-        width: 280,
-        height: 250,
-        display: 'flex',
-        flexDirection: 'column',
-        paddingStart: 30,
-        paddingEnd: 20,
-        alignItems: 'flex-start',
-        justifyContent: 'space-evenly',
-        backgroundColor: '#FFFFFF10',
-        borderRadius: 8,
-        shadowColor: 'black',
-        elevation: 15
-    },
-    cardContainer: {
-        /* backgroundColor: 'green', */
-        width: '90%',
-        height: '30%',
-        marginTop: 230,
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'flex-end',
-        justifyContent: 'space-evenly'
-    },
-    titleSpan: {
-        color: 'blue',
-        fontWeight: '400'
-    },
-    title: {
-        color: 'white',
-        fontSize: 70,
-        fontWeight: '100'
-    },
-    titleContainer: {
-        width: '35%',
-        height: '16%',
-        // backgroundColor: 'green',
-        marginTop: 150,
-        marginEnd: 750
-    },
-    logo: {
-        width: 150,
-        height: 150,
-        marginTop: 20
-    },
-    navBarButtons: {
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-evenly',
-        width: '50%',
-        // backgroundColor: 'green'
-    },
-    navBar: {
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-around',
-        // gap: '2%',
-        width: '100%',
-        height: '10%',
-        // backgroundColor: 'green'
-    },
-    backgroundBlack : {
-        position: 'absolute',
-        width: '100%',
-        height: '100%',
-        backgroundColor: 'black'
-    },
-    background: {
-        position: 'absolute',
-        width: '100%',
-        height: '100%',
-        zIndex: -1,
-        opacity: 0.2
-    },
-    container: {
-      flex: 1,
-      alignItems: 'center',
-      color: 'white',
-    },
-    root: {
-        color: 'white',
-    }
-})
