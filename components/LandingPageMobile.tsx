@@ -1,4 +1,4 @@
-import { Text, Image, View, ImageBackground, ScrollView, Animated } from 'react-native'
+import { Text, Image, View, ImageBackground, ScrollView, Animated, TextInput, StyleSheet } from 'react-native'
 import { useState, useEffect } from 'react'
 import NavBarButton from './NavBarButton'
 import CardView from './CardView'
@@ -58,10 +58,24 @@ export default function LandingPageMobile() {
 
                 <CardView number='06' title="Front-end Development" />
 
+                <TextInput
+                    style={styles.textInput}
+                    placeholder="Username"
+                    placeholderTextColor="#FFFFFF"
+                    keyboardType="ascii-capable"
+                />
+
+                <TextInput
+                    style={styles.textInput}
+                    placeholder="Password"
+                    placeholderTextColor="#FFFFFF"
+                    secureTextEntry={true}
+                />
+
                 <NavBarButton title="Login" outline={true} />
 
                 <NavBarButton title="Sign up" />
-                
+
                 <NavBarButton title="About" />
             </ScrollView>
         </>
